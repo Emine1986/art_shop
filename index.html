@@ -15,43 +15,97 @@
 <body>
 
     <header>
-        <div class="icons"> 
+        <div class="icons" id="burgerIcon"> 
             <img src="/images/icons/ui.png" alt="Menu"></img>
         </div>
         <div class="icons">   
             <img src="/images/icons/icons8-warenkorb-50.png" alt="Einkaufswagen"></img>
         </div>
     </header>
+
+    <section class="overlay" id="overlay"></section> 
     
-    <main>
-        <h1>Meine Welt in Aquarell</h1>
-        <img class="landscape" src="/images/landscapes/ersatzbild.png" alt="Sonnenuntergangslandschaft"> </img> 
-        <article> Herzlich Willkommen auf meiner Website <strong>"Meine Welt in Aquarell"</strong>. Lassen Sie sich in meine Welt eintauchen und die Schönheit der Bilder einfangen und bewundern.</article>
-        <h2>Nicht das richtige dabei?</h2>
-        <p>So melden Sie sich bei mir und teilen Sie mir Ihr Wunsch mit.</p>
-        <h2>Kontaktformular</h2>
-        <form action="#" method="post">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="vorname">Vorname:</label>
-                    <input type="text" id="vorname" name="vorname" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="email">E-Mail Adresse:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="nachricht">Nachricht:</label>
-                <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
-            </div>
-            <button type="submit">Senden</button>
-        </form>
-    </main>
+    <nav class="burger-menu" id="burgerMenu">
+        <div class="burger-menu-header">
+            Menü
+        </div>
+        <a href="#" class="burger-menu-item" data-section="home">Startseite</a>
+        <a href="#" class="burger-menu-item" data-section="ueber-mich">Über mich</a>
+        <a href="#" class="burger-menu-item" data-section="verkauf">Verkauf</a>
+        <a href="#" class="burger-menu-item" data-section="versand-zahlung">Versand- und Zahlungsart</a>
+    </nav>
+
+    <section class="content">
+        <div id="home" class="section active">
+            <main>
+                <h1>Meine Welt in Aquarell</h1>
+                <img class=" landscape" src="/images/landscapes/ersatzbild.png" alt="Sonnenuntergangslandschaft"> </img>
+                <article> Herzlich Willkommen auf meiner Website <strong>"Meine Welt in Aquarell"</strong>. Lassen Sie sich in meine Welt eintauchen und die Schönheit der Bilder einfangen und bewundern.</article>
+                
+                <h2>Nicht das richtige dabei?</h2>
+                <p>So melden Sie sich bei mir und teilen Sie mir Ihr Wunsch mit.</p>
+                
+                <h2>Kontaktformular</h2>
+                <form action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vorname">Vorname:</label>
+                            <input type="text" id="vorname" name="vorname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail Adresse:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nachricht">Nachricht:</label>
+                        <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Senden</button>
+                </form>
+            </main>
+        </section>
+
+        <section id="ueber-mich" class="section">
+            <h2>Über mich</h2>
+            <p>Ich bin Emine Leanza, Hobbykünstlerin aus Hamm NRW. Meine Künstlerische Reise begann schon in meiner Jugend, wo ich mich häufig und gerne in meine Buntstiftzeichnungen vertiefte.
+               Nach einer längeren Pause, indem andere Interessen im Vordergrund standen, habe ich 2019 meine Vorliebe für die Aquarellmalereientdeckt. Seit dem lasse ich mich von den zarten Farbverläufen und 
+               der lebendigen Eigendynamik der Aquarellfarben faszinieren.</p>
+            <p>Die Malerei ist für mich ein wunderbare Ausgleich und eine Leidenschaft, der ich mal mehr, mal weniger, aber immer mit ganzem Herzen nach gehe. So sind in Laufe der Zeit
+               viele Werke entstanden, die bereit sind, neue Besitzer zu finden. Es ist mir eine Freude, dass ich meine Bilder nun auch in meinem Shop anbieten kann.
+               Ich hoffe, sie bringen genauso viel Freude in die Wohnungen und Häuser anderer, wie ich beim Malen hatte.</p>
+            <p>Um meine Begeisterung mit anderen zu teilen und mich selbst zu motivieren, regelmäßig am Ball zu bleiben, habe ich meinen YouTube-Kanal "MeineWeltINAquarell" ins Leben gerufen.
+               Ich hoffe sehr, dass ich nicht nur meine Kunst zeigen, sondern auch den ein ider anderen dazu inspirieren kann, den Pinsel in die Hand zu nehmen und die Freude am Malen (wieder) zu entdecken.</p>
+        </section>
+
+        <section id="verkauf" class="section">
+            <h2>Verkauf</h2>
+            <p>Hier finden Sie eine Auswahl meiner Aquarellbilder, die zum Verkauf stehen. Jedes Werk ist ein Unikat und wurde mit viel Liebe und Sorgfalt gemalt.</p>
+            <p>Alle Bilder sind auf hochwertigem Aquarellpapier gemalt und werden sicher verpackt verschickt. Bei Interesse oder Fragen zu einem bestimmten Bild nutzen Sie gerne das Kontaktformular.</p>
+            <p>Preise variieren je nach Größe und Aufwand. Gerne erstelle ich auch Auftragsarbeiten nach Ihren Wünschen.</p>
+        </section>
+
+        <section id="versand-zahlung" class="section">
+            <h2>Versand- und Zahlungsart</h2>
+            <h3>Versand:</h3>
+            <p>Alle Bilder werden sorgfältig verpackt und per Post verschickt. Der Versand innerhalb Deutschlands erfolgt über DHL und dauert in der Regel 2-3 Werktage.</p>
+            <p>Versandkosten: 4,99 € innerhalb Deutschlands. Ab einem Bestellwert von 50 € ist der Versand kostenfrei.</p>
+            
+            <h3>Zahlung:</h3>
+            <p>Folgende Zahlungsarten werden akzeptiert:</p>
+            <ul style="text-align: left; margin: 20px 0; padding-left: 20px;">
+                <li>Überweisung (Vorkasse)</li>
+                <li>PayPal</li>
+            </ul>
+            
+            <p>Nach Zahlungseingang wird Ihre Bestellung umgehend bearbeitet und versendet.</p>
+        </section>  
+    </section>
+    
     <footer>
         <nav>
             <a href="#">Impressum</a> 
@@ -66,7 +120,8 @@
         </div>
         <div class="copyright">
             &copy; 2025 Beispielseite. Alle Rechte vorbehalten.
-        </div>
-    </footer>    
+        </div>   
+    </footer>   
+    <script src="./burgermenu.js"></script>
 </body>
 </html>

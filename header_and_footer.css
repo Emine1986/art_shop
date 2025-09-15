@@ -6,7 +6,7 @@ header {
     margin-bottom: 25px;
     background-image: linear-gradient(to bottom,rgb(86, 48, 121), red);
     max-width: 100%;
-    /*height: 100px;*/
+    position: relative;
 }
 
 .icons{
@@ -15,18 +15,114 @@ header {
     align-items: center;
     width: 40px;
     height: 40px;
+    cursor: pointer;
+    z-index: 1001;
 }
 
-img {
+.icons img {
     max-width: 100%;
-    max-height: 600px;
+    max-height: 100%;
+}
+
+.burger-menu {
+    position: fixed;
+    top:0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0,0.1);
+}
+
+.burger-menu.active{
+    left:0;
+}
+
+.burger-menu-header{
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.burger-menu-item {
+    display: block;
+    padding: 20px;
+    color: gray;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.burger-menu-item:hover {
+    background-color: rgb(86, 48, 121);
+    color: white;
+}
+
+.burger-menu-item:last-child {
+    border-bottom: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba (0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section {
+    display: none;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba (0, 0, 0, 0.1);
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    color: rgb(86, 48, 121);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.section p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 16px;
 }
 
 footer{
     margin-top: 50px;
     background-image: linear-gradient(to bottom,orangered, rgb(18, 12, 23));
     max-width: 100%;
-    /*height: 100px;*/
     padding: 30px 40px;
     display: flex;
     justify-content: space-between;
@@ -50,18 +146,19 @@ footer nav a:hover {
     color:#ffcc00;
 }
 
-.icons img {
+footer .icons {
+    margin-top: 15px;
+}
+
+footer .icons img {
     width: 40px;
     height: 40px;
+    margin: 0 5px;
 }
 
-.icons img:hover {
+footer .icons img:hover {
     transform: scale(1.2);
     filter: brightness(0) invert(0.8) sepia(1) hue-rotate(5deg) saturate(5);
-}
-
-.icons {
-    margin-top: 15px;
 }
 
 .copyright {
@@ -70,5 +167,6 @@ footer nav a:hover {
     color: rgba(255,255,255,0.7);
     margin-top: 25px;
     padding-top: 15px;
-    border-top: 1px solid;
+    border-top: 1px solid rgba(255,255,255,0.3);
 }
+
